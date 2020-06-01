@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/to_time"
+        android:layout_width="58dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/time_placeholder"
+        android:inputType="none"
+        android:longClickable="false"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="17dp"
+        android:text="@string/seats_placeholder"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view7"
+        style="@style/DividerH"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <View
+        android:id="@+id/view6"
+        style="@style/DividerV"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="210dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        style="@style/DividerH"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/DividerH"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        style="@style/DividerV"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginEnd="210dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageButton
+        android:id="@+id/favorite_button"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@android:drawable/btn_star_big_off"
+        android:contentDescription="@string/favorite_button_description" />
+
+    <Button
+        android:id="@+id/quick_book_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="150dp"
+        android:text="@string/quick_booking_button_text"
+        android:onClick="performQuickBooking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/areas_label"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quick_book_button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/from_label"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/to_label"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintStart_toEndOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/seats_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/area_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:dividerHeight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+    <EditText
+        android:id="@+id/from_time"
+        android:layout_width="58dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/time_label"
+        android:inputType="none"
+        android:longClickable="false"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="1.0"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/from_date"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/date_hint"
+        android:inputType="none"
+        android:longClickable="false"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintEnd_toStartOf="@+id/view6"
+        app:layout_constraintStart_toEndOf="@+id/from_time"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/to_date"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#000000"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/date_hint"
+        android:inputType="none"
+        android:longClickable="false"
+        android:textCursorDrawable="@null"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/to_time"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        tools:ignore="TextFields"
+        android:importantForAutofill="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
